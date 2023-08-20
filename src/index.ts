@@ -4,3 +4,6 @@ console.log('Hello World');
 let age: number = 20;
 // Ts catchs your mistakes!
 // age = "string";
+
+
+// Configuring Typescript
