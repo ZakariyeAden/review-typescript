@@ -22,3 +22,11 @@ let level;
 function render(document: any){
   console.log(document);
 }
+
+
+// Arrays
+let numbers:number[] = [6,5,6,6,'4'];
+// Any: should avoid
+let numbersAny = [];
+// Methods 
+// numbers.forEach(n => n.valueOf())
