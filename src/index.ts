@@ -11,3 +11,14 @@ if(age <= 50){
 
 
 // Configuring Typescript
+
+
+// Fundmantels 
+let sales = 1234567890;
+let course = 'TypeScript';
+let is_Published = false;
+let level;
+
+function render(document: any){
+  console.log(document);
+}
