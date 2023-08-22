@@ -115,3 +115,26 @@ function greet(name: string | null | undefined){
 }
 
 greet(null)
+
+
+type Customer = {
+  birthday: Date
+}
+
+function getCustomer(id: number){
+  return id === 0 ? null : {birthday: new Date()}
+}
+
+let customer = getCustomer(0);
+if(customer !== null && customer !== undefined)
+// Optional property access operator
+console.log(customer?.birthday.getFullYear());
+
+
+// Optional property access operator
+// customers?.[0]
+
+// Optional call
+let log: any = null;
+
+log?.('a');
