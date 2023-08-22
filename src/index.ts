@@ -56,15 +56,45 @@ function calculateTax(income: number, taxYear: 2022): number{
   // Undefined
 }
 calculateTax(10_000,2022);
-// Objects
-let employee: {
+
+
+type Employee = {
   readonly id: number,
   name: string,
   retire: (date: Date) => void
-} = { 
+}
+
+// Objects
+let employee: Employee = { 
   id: 1,
   name: '',
   retire: (date: Date) => {
     console.log(date);
   }
 };
+// Union Types
+function kgToLbs(weight: number | string){
+  // Narrowing
+  if(typeof weight === 'number')
+    return weight * 2.2;
+  else 
+    return parseInt(weight) * 2.2;
+}
+kgToLbs(10);
+kgToLbs('10kg');
+
+// Intersection type
+let weight: number & string;
+
+type Drabbable = {
+  drag: () => void
+}
+type Resizeable = {
+  resize: () => void
+};
+type UIWidget = Drabbable & Resizeable;
+
+let textBox: UIWidget = {
+  drag: () => {},
+  resize: () => {} 
+}
